@@ -9,7 +9,8 @@ a{
 }
 
 a:hover{
-  background: #e72929;
+  background-color: #e72929;
+  color: whitesmoke;
 }
 
 .container{
