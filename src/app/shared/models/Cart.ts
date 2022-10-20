@@ -8,6 +8,6 @@ export class Cart{
     this.items.forEach(item => {
       totalPrice += item.price;
     });
-    return this.totalPrice;
+    return totalPrice;
   }
 }
