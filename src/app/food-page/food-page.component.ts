@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FoodService } from '../services/food/food.service';
 import { Food } from '../shared/models/Food';
 import { CartService } from '../services/cart/cart.service';
+// import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 @Component({
   selector: 'app-food-page',

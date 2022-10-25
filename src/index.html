@@ -6,8 +6,36 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
 </head>
 <body>
   <app-root></app-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+  <script>
+    function showNotification(){
+      const notification = new Notification("Nuevo mensaje de restaurante",{
+        body: "Bienvenido a "
+      })
+    }
+
+    console.log(Notification.permission)
+
+    if(Notification.permission === "granted"){
+
+      showNotification()
+
+    } else if (Notification.permission !== "denied"){
+      Notification.requestPermission().then(permission =>{
+        if(permission === "granted"){
+          showNotification();
+        }
+      })
+    }
+  </script>
 </body>
 </html>
+
+<!-- {"publicKey":"BMlJ17bq1qZ30ura7isNING1pZa33iISUuW3wXMo5ySv-HWqQFVc-4UYapsoN8T2NmKGBdJwAbLYvORmtPd-y4s","privateKey":"Ur4CD6tRfAVcJmzJJWzrj5vkv19SLMa2Flmg6HiQAW8"} -->
